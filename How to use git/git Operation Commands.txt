@@ -1,0 +1,24 @@
+git clone git@github.com:ovidiuhomoc/RaspberryPi_1.git ~/git/RaspberryPi_1
+
+git remote add upstream https://github.com/ovidiuhomoc/RaspberryPi_1.git
+git remote -v
+
+git branch
+git branch -a
+
+git branch -d nume_ramura
+git push origin --delete nume_ramura
+
+
+git checkout nume_ramura
+git checkout master
+
+git pull upstream nume_ramura
+
+
+git add .
+git commit -m "Comentarii"
+
+git push 
+git push origin nume_ramura
+
