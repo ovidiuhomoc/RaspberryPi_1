@@ -1,0 +1,7 @@
+ctrl + alt + T
+
+sudo ln -s /home/pi/git/RaspberryPi_1 /home/pi/Desktop
+
+ln - create hard directory
+
+ln -s source destination

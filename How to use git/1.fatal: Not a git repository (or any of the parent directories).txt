@@ -1,0 +1,5 @@
+The command has to be entered in the directory of the repository. The error is complaining that your current directory isn't a git repo
+
+Are you in the right directory? Does typing ls show the right files?
+Have you initialized the repository yet? Typed git init
+Either of those would cause your error.
