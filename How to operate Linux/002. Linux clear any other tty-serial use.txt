@@ -1,0 +1,30 @@
+http://www.irrational.net/2012/04/19/using-the-raspberry-pis-serial-port/
+
+list with all used tty
+	dmesg | grep tty
+
+sudo cp /boot/cmdline.txt /boot/cmdline_backup.txt
+sudo vi /boot/cmdline.txt
+
+
+
+sudo vi /etc/inittab
+comment
+	2:23:respawn:/sbin/getty -L ttyAMA0 115200 vt100
+
+
+
+for all debian>=8
+http://raspberrypi.stackexchange.com/questions/39165/how-can-i-stop-auto-login-console-and-getty-in-raspbian-jessie
+
+stop sevice
+	sudo systemctl stop serial-getty@ttyAMA0.service
+
+disable start at boot
+	sudo systemctl disable serial-getty@ttyAMA0.service
+
+
+display running processes
+	top
+
+https://sites.google.com/site/petersraspi/learning-linux-1/showallrunningprocessesinraspbian
