@@ -1,5 +1,3 @@
-# RaspberryPi_1
+# Repository for Raspberry Pi project
 
-This is a test for adding and updating branches into Raspbian.
-
-This repo has been modified from Raspberry and pusshed to branch.
+Place here main code files and create branches for tests.
