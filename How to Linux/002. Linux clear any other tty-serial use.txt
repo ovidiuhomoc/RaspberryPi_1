@@ -1,4 +1,5 @@
 http://www.irrational.net/2012/04/19/using-the-raspberry-pis-serial-port/
+http://www.elinux.org/Serial_port_programming
 
 list with all used tty
 	dmesg | grep tty
@@ -22,6 +23,8 @@ stop sevice
 
 disable start at boot
 	sudo systemctl disable serial-getty@ttyAMA0.service
+
+	systemctl mask serial-getty@ttyAMA0.service
 
 
 display running processes
