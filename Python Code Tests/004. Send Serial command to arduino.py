@@ -24,26 +24,23 @@ def button_press():
     threading.Timer(2,write_serial,[2]).start()
 
 def write_serial(i):
-    ctrl.on()
+    
     adr_exp=10
     adr_dest=1
-    elemente=1
+    elemente=15
     final=5
 
     print ("s-a apasat butonul si se transmite pe serial")
     
-    try:   
+    try:
         ser.write("{}|{}|{}|{}|{}\n\r".format(adr_exp,adr_dest,i,elemente,final))
-        print ("__{}|{}|{}|{}|{}\n\r".format(adr_exp,adr_dest,i,elemente,final))
+        print ("**{}|{}|{}|{}|{}**\n".format(adr_exp,adr_dest,i,elemente,final))
     except Exception as inst:
         print ("nu s-a trecut de try iar exceptia este: {}".format(inst))    
         pass
-    ctrl.off()
-
+    
 In1=Button(18)
-flag=0
-ctrl=LED(16)
-ctrl.off()
+portSerial=0
 
 try:
     ser=serial.Serial(
@@ -60,13 +57,13 @@ try:
     
     if (ser.isOpen()):
         print("Portul este deschis")
-        flag =1
+        portSerial =1
     else:
         print("Portul nu este deschis")
 except Exception as inst:
     print ("Nu s-a putut deschide portul iar exceptia este :{}".format(inst))           # __str__ allows args to be printed directly
 
-if flag:
+if portSerial:
     t=threading.Thread(target=read_serial,args=[ser])
     t.start()
     In1.when_pressed=button_press
