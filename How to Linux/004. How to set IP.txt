@@ -1,0 +1,13 @@
+1. editorul in modul super user (deschis din terminal)
+	sudo pcmanfm
+2. navigare catre root/etc/network/
+3. editare cu leafpad fisierul interfaces (se mentin privilegii de superuser)
+4. schimbare conform instructiuni memorate inauntru
+5. restart servicii network
+	sudo service networking restart
+6. verificare setari retea
+	ifconfig
+7. 	sudo ping adresa
+	CTRL+C pentru oprire ping
+	
+	ping -c 10 pentru ping limitat
